@@ -4,21 +4,42 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-export-optimize-images",
+    "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint:html": "markuplint 'src/**/*.{html,jsx,tsx}'",
+    "lint:style": "stylelint 'src/**/*.{css,scss}'",
+    "lint:es": "next lint",
+    "lint:check": "npm run lint:html && npm run lint:style && npm run lint:es",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "microcms-js-sdk": "^2.7.0",
     "react": "^18",
     "react-dom": "^18",
     "next": "14.0.1"
   },
   "devDependencies": {
+    "@markuplint/jsx-parser": "^3.11.0",
+    "@markuplint/react-spec": "^3.12.0",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.0.1"
+    "eslint-config-next": "14.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "markuplint": "^3.14.0",
+    "next-export-optimize-images": "^3.2.0",
+    "next-sitemap": "^4.2.3",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.4",
+    "stylelint": "^15.11.0",
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-recommended-scss": "^13.1.0",
+    "stylelint-prettier": "^4.0.2"
   }
 }
