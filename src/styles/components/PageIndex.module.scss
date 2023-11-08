@@ -1,0 +1,13 @@
+@use '@/styles/base/variables' as *;
+@use '@/styles/base/mixins' as *;
+@use '@/styles/base/functions' as *;
+
+.root {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  color: $color-base-black;
+  font-size: 20px;
+}

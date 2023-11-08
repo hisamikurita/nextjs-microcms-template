@@ -1,0 +1,44 @@
+@use '@/styles/base/variables' as *;
+@use '@/styles/base/mixins' as *;
+@use '@/styles/base/functions' as *;
+
+html,
+body {
+  overflow-x: clip;
+}
+
+html {
+  // 1rem = 60分割のグリッドとする処理
+  // calc(100vw / 60)
+  // 1rem = 1grids
+  font-size: 1.6667vw;
+}
+
+body {
+  overflow-x: clip;
+  color: $color-base-black;
+}
+
+// コンテナークラス
+// 基本的にはこの中にコンテンツを入れる
+// 例外の場合は適宜各SCSSファイルのスタイル内で固有に指定してください
+.container {
+  width: 68rem;
+  margin: 0 auto;
+
+  @include sp() {
+    width: 52rem;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  display: flex;
+  width: 100%;
+  height: auto;
+}

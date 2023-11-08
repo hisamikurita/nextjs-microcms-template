@@ -1,0 +1,32 @@
+// breakpoints
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1420px,
+);
+
+// design size
+$design-size: (
+  "pc-width": 1440,
+  "pc-height": 810,
+  "sp-width": 390,
+  "sp-height": 800,
+);
+
+// colors
+$color-base-white: #ffffff;
+$color-base-black: #000000;
+
+// animations
+$duration-short: 0.3s;
+$duration-base: 0.6s;
+$duration-full: 0.9s;
+
+// easing
+$easing-transform: cubic-bezier(0.43, 0.05, 0.17, 1);
+$easing-material: cubic-bezier(0.26, 0.16, 0.1, 1);
+
+// z-index
+$z-index-header: 100;
+$z-index-openning: 101;
