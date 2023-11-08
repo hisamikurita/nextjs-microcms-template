@@ -2,7 +2,8 @@
 
 ## フロントエンド使用技術
 
-- Next.js (Using Pages Router)
+- Next.js (Using Pages Router / SSG & CSR)
+- CSS Modules
 - TypeScript
 
 ## CMS
@@ -17,9 +18,25 @@
 
 Node.js >=18.0.0
 
+### microCMS　のセットアップ
+
+microCMS のセットアップを行います。
+
+- APIのエンドポイント名を「blog」として指定して、リスト型のデータを作成し、下記のデータをインポートしてください。
+
+- APIのエンドポイント名を「about」として指定して、オブジェクト型のデータを作成し、下記のデータをインポートしてください。
+
 ### env ファイルの作成
 
-.env.sample を複製して .env にリネームしてください。
+.env.sample に下記の値を登録してください。`NEXT_PUBLIC`の接頭辞がつく環境変数は CSR のための変数です。
+
+- SERVICE_DOMAIN
+- API_KEY
+- NEXT_PUBLIC_SERVICE_DOMAIN
+- NEXT_PUBLIC_API_KEY
+- NEXT_PUBLIC_SITE_URL
+
+.env.sample を複製して .env を作成してください。
 
 ### パッケージインストール
 
@@ -40,10 +57,15 @@ npm run dev
 ### コンポーネントについて
 
 - コンポーネントは`src/components/`直下に全てフラットに置きます。
-- ファイル名はなるべく属性を先頭に持ってきて、一覧で見たときに探しやすい状態を維持するようにしてください。（ex.「BaseHoge」「PageHoge」「CardHoge」「ButtonHoge」など）
+- ファイル名はなるべく属性を先頭に持ってきて、一覧で見たときに探しやすい状態を維持するようにしてください。（ex.「BaseHoge」「PageHoge」「CardHoge」「ButtonHoge」etc...）
 - `pages`ディレクトリはデータの取得のみにして、`src/components/PageHoge`に受け渡します。
 
 ### スタイリングについて
+
+CSS Modules を使用してスタイリングを行います。
+
+- CSS Modules の特性上、モディファイアをクラス名として扱うのが面倒なため、data 属性を利用することを推奨します。(ex. data-color="hoge" etc...)
+- コンポーネント名とCSS Modulesのファイル名を揃えてください。
 
 ### 画像について
 
