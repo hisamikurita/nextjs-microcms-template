@@ -22,9 +22,13 @@ Node.js >=18.0.0
 
 microCMS のセットアップを行います。
 
-- APIのエンドポイント名を「blog」として指定して、リスト型のデータを作成し、下記のデータをインポートしてください。
+1. APIのエンドポイント名を「blog」として指定して、リスト型のデータを作成し、下記のデータをインポートしてください。
 
-- APIのエンドポイント名を「about」として指定して、オブジェクト型のデータを作成し、下記のデータをインポートしてください。
+<https://github.com/liginc/nextjs-microcms-template/blob/main/sample-api-data/api-blog-20231108170628.json>
+
+2. APIのエンドポイント名を「about」として指定して、オブジェクト型のデータを作成し、下記のデータをインポートしてください。
+
+<https://github.com/liginc/nextjs-microcms-template/blob/main/sample-api-data/api-about-20231108171148.json>
 
 ### env ファイルの作成
 
